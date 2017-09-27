@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+@import url('https://fonts.googleapis.com/css?family=Asap+Condensed');
+
+
+.dropdown
+{
+    width: 120px;
+    border: 1.5px solid rgba(39, 37, 37, 0.69);
+    border-radius: 12px;
+    background-color: #2D2B2B;
+    color: white;
+}
+
+.dropdow option
+{
+    font-family: 'Asap Condensed', sans-serif;
+    min-width: 100%;
+    z-index: 1;
+}
+
+
+.fields
+{
+    font-size: 35px;
+    background-color: white;
+    border: solid 7px;
+
+}
+
+.res
+{
+
+    font-size: 13px;
+    border:none;
+    padding: 8px 16px;
+    background-color: #2D2B2B;
+    color: white; 
+    cursor: pointer;
+    transition: .3s;
+}
+.res:hover
+{
+    background-color: #3E3B3B;
+    font-size: 15px;
+}
+
+
+body
+{
+    font-family: 'Libre Barcode 39 Text', cursive;
+    background-image: url(https://i.pinimg.com/736x/32/1c/f1/321cf1406ccf79fdb48450983c0012cb--photography-photos-streets-photography.jpg);
+}

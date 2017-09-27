@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+<body>
+    <fieldset class="fields">
+        <legend class="appname">Calculator v0.1</legend>
+        <p>First number:</p>
+        <input type="text" name="firstnum" id="firstnum">
+        <br>
+
+        <select class="dropdown" id="oper" onChange="Model()">Operator>
+            <option value="0">+</option>
+            <option value="1">*</option>
+            <option value="2">-</option>
+            <option value="3">/</option>
+        </select>
+        <p>Second number:</p>
+        <input type="text" name="secnum" id="secnum"><br>
+        <button type="button" class="res" onClick="Calculate()">Calculate</button>
+    </fieldset>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
