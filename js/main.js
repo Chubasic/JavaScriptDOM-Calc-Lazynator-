@@ -1,68 +1,107 @@
-//Mirgration from C
+//JS newbie
+let operator, res;
+let result;
+let list;
+let history = [];
+let values  = {
+    firstField: 0,
+    secondField: 0,
+    operatorValue: 0
+};
 
-var firstField, operator, operatorValue, secondField, res;
 
-function Add(firstField, secondField)
+const Add = (firstField, secondField) =>
 {
     res = firstField + secondField;
-    PrintLn(res);
-}
+    return res;
+};
 
-function Mult(firstField, secondField)
+const Mult = (firstField, secondField) =>
 {
     res = firstField * secondField;
-    PrintLn(res);
-}
+    return res;
+};
 
-function Sub(firstField, secondField)
+const Sub = (firstField, secondField) =>
 {
     res = firstField - secondField;
-    PrintLn(res);
-}
+    return res;
+};
 
-function Devide(firstField, secondField)
+const Devide = (firstField, secondField) =>
 {
     res = firstField / secondField;
-    PrintLn(res);
-}
+    return res;
+};
+
+const listSum = (history) =>{
+    let liSum = document.getElementById('result');
+    let jLiSum =  history.reduce((a,b) => a+b, 0);
+    liSum.innerHTML = jLiSum;
+};
+
 
 function Calculate()
 {
+    res = 0;
     //Uno
-    switch (operatorValue) {
+    switch (values.operatorValue) {
         case "0":
-        Add(firstField, secondField);            
+        Add(values.firstField, values.secondField);
+        printLn();
             break;
         case "1":
-        Mult(firstField, secondField); 
+        Mult(values.firstField, values.secondField);
+        printLn();
             break;
         case "2":
-        Sub(firstField, secondField); 
+        Sub(values.firstField, values.secondField);
+        printLn();
             break;
         case "3":
-        Devide(firstField, secondField); //I love this word...DEVIDDEEE!!1 
+        Devide(values.firstField, values.secondField);
+        //I love this word...DEVIDDEEE!!1
+        printLn();
             break;
         default:
             break;
     }
 }
 
-function PrintLn(args)
+const printLn = () =>
 {
-    if(args==Infinity)
+    result = document.getElementById('result');
+    list = document.getElementById('list');
+    if(res==Infinity)
     {
-        alert("Yo dummy");
+        result.innerHTML = 'Yo dummy!';
     }else{
-        alert("Result is:" + args);
+        result.innerHTML = res;
+        cache();
     }
-}
+};
+
+
+const cacheCheck = () =>{
+    if(history.length == 5){
+        list.removeChild(list.childNodes[1]);
+        history.pop();
+    }
+};
+
+
+const cache = () =>{
+    cacheCheck();
+    history.unshift(res);
+    list.insertAdjacentHTML('beforeend', '<span>' + history[0] + ' | '+ '</span>');
+};
+
 
 function Model()
 {
     //Geting value of field and operator options
-    firstField = parseFloat(document.getElementById('firstnum').value);
+    values.firstField = parseFloat(document.getElementById('firstnum').value);
     operator = document.getElementById('oper');
-    operatorValue = operator.options[operator.selectedIndex].value;
-    secondField = parseFloat(document.getElementById('secnum').value);
-
+    values.operatorValue = operator.options[operator.selectedIndex].value;
+    values.secondField = parseFloat(document.getElementById('secnum').value);
 }

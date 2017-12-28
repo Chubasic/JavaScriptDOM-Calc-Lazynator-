@@ -4,7 +4,8 @@
 
 .dropdown
 {
-    width: 120px;
+    width: 50px;
+    height: 30px;
     border: 1.5px solid rgba(39, 37, 37, 0.69);
     border-radius: 12px;
     background-color: #2D2B2B;
@@ -27,9 +28,15 @@
 
 }
 
+.field{
+    width: 10%;
+    height: 30px;
+    border: solid 1px crimson;
+}
+
+
 .res
 {
-
     font-size: 13px;
     border:none;
     padding: 8px 16px;
@@ -49,4 +56,32 @@ body
 {
     font-family: 'Libre Barcode 39 Text', cursive;
     background-image: url(https://i.pinimg.com/736x/32/1c/f1/321cf1406ccf79fdb48450983c0012cb--photography-photos-streets-photography.jpg);
+}
+
+.conclusion{
+    border: 1px solid crimson;
+    width: auto;
+    height: 100px;
+    background-color: #3E3B3B;
+    color: antiquewhite;
+}
+
+.result--block{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-top: 20px;
+}
+
+.history{
+    height: 20px;
+    border: groove 1px crimson;
+}
+
+.get{
+
+}
+
+.font-big{
+    font-size: 1.5em;
 }
