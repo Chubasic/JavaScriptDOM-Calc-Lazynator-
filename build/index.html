@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Frontend</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+<fieldset class="fields">
+        <legend class="appname">Calculator v0.3</legend>
+        <p>First number:</p>
+        <input placeholder="0" type="text" class="field" id="firstnum" onChange="Model(this.value)">
+        <br>
+
+        <select class="dropdown" id="oper" onChange="Model(this.value)">Operator>
+            <option value="0">+</option>
+            <option value="1">*</option>
+            <option value="2">-</option>
+            <option value="3">/</option>
+        </select>
+        <p>Second number:</p>
+        <input placeholder="0" type="text" class="field" id="secnum" onChange="Model(this.value)"><br>
+        <button type="button" class="res" onClick="Calculate()">Calculate</button>
+    </fieldset>
+    <section>
+        <div class="conclusion">
+            <div class="result--block">
+                <span>Result:</span>
+                <span class="font-big" id="result">
+
+                </span>
+                <div class="history">
+                    <div>
+                        <span>Operations cache:</span>
+                        <div id="list">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="get">
+                    <button class="res" onclick="listSum(history)">Get sum</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
