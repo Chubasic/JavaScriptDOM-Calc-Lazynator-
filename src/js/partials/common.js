@@ -36,7 +36,8 @@ const Devide = (firstField, secondField) =>
     return res;
 };
 
-const listSum = (history) =>{
+const listSum = (history) =>
+{
     let liSum = document.getElementById('result');
     let jLiSum =  history.reduce((a,b) => a+b, 0);
     liSum.innerHTML = jLiSum;
@@ -84,7 +85,8 @@ const printLn = () =>
 };
 
 
-const cacheCheck = () =>{
+const cacheCheck = () =>
+{
     if(history.length == 5){
         list.removeChild(list.childNodes[1]);
         history.pop();
@@ -92,7 +94,8 @@ const cacheCheck = () =>{
 };
 
 
-const cache = () =>{
+const cache = () =>
+{
     cacheCheck();
     history.unshift(res);
     list.insertAdjacentHTML('beforeend', '<span>' + history[0] + ' | '+ '</span>');
